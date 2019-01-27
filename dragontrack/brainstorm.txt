@@ -1,0 +1,48 @@
+﻿
++ typescript single page app
++ F# aspnet core
+
++ client side
+	+ refresh page doesnt reset the position of the track
+	+ audio api
+	+ plus icon element accepts file path when clicked
+	+ plus icon element accepts drag drop file 
+		ondrop event
+		ondragover event
+
+		call event.preventDefault()
+		call event.dataTransfer.getData("text/plain")
+
+	+ offer download link of current song
+
+	+ angular modal pup up notifies on session expiration
+
+	+ validate file size 70mb
+
++ server side
+	+ caching of two tracks
+	+ session id for other to join
+	+ any user can create a session id
+	+ first track that is uploaded plays until completion
+	+ second track is stored and its metadata displayed
+	+ if any subsequent track is uploaded, the second track is replaced
+	+ sessions stored in cache
+	+ session model contains two tracks
+	+ increase session expiration date when a request is made to it
+	+ session expiration date 20 minutes
+	+ validate file size upload max 70mb
+	+ validate cache size limit
+
++ audio format wishlist
+	WMA
+	MP3
+	FLAC
+	WAV
+	M4A
+	WMP
+	AAC
+	OGG
+
+https://www.nuget.org/packages/Vlc.DotNet.Core/
+
+https://github.com/naudio/NAudio
