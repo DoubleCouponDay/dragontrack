@@ -14,7 +14,10 @@ open Microsoft.AspNetCore.SpaServices.AngularCli
 
 type Startup private () =
     [<Literal>]
-    let staticfilespath = "clientside/dist"
+    let sourcefolderspath = "clientside"
+
+    [<Literal>]
+    let staticfilespath = sourcefolderspath + "/dist"
 
     new (configuration: IConfiguration) as this =
         Startup() then
@@ -38,6 +41,9 @@ type Startup private () =
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts() |> ignore
 
+        app.UseStaticFiles()
+        app.UseSpaStaticFiles()
+
         app.UseHttpsRedirection() |> ignore
         app.UseMvc(fun routes ->
             routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}")
@@ -48,10 +54,10 @@ type Startup private () =
             // To learn more about options for serving an Angular SPA from ASP.NET Core,
             // see https://go.microsoft.com/fwlink/?linkid=864501
 
-            spa.Options.SourcePath <- staticfilespath
+            spa.Options.SourcePath <- sourcefolderspath
 
-            if env.IsDevelopment() then            
+            if env.IsDevelopment() then
                 spa.UseProxyToSpaDevelopmentServer("http://localhost:4200")
-        )
+        )       
 
     member val Configuration : IConfiguration = null with get, set
