@@ -1,97 +1,89 @@
 p {
     margin: 0px;
-}
-h1 {
+  }
+  h1 {
     margin: 0px;
-}
-h2 {
+  }
+  h2 {
     margin: 0px;
-}
-h3 {
+  }
+  h3 {
     margin: 0px;
-}
-#gwd-svg-definitions {
+  }
+  #gwd-svg-definitions {
     position: absolute;
-}
-html, body {
+  }
+  #gwd-svg-definitions {
+    position: absolute;
+  }
+  html, body {
     width: 100%;
     height: 100%;
     margin: 0px;
-}
-body {
+  }
+  body {
     background-color: transparent;
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    -moz-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    perspective: 1400px;
-    -webkit-perspective: 1400px;
-    -moz-perspective: 1400px;
+    transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-}
-.gwd-div-1bk2 {
-    height: 307px;
-    position: absolute;
-    width: 588px;
-    left: 50%;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    top: 50%;
-    transform: translate3d(-294px, -153px, 0px);
-    -webkit-transform: translate3d(-294px, -153px, 0px);
-    -moz-transform: translate3d(-294px, -153px, 0px);
-}
-.gwd-path-1wlg {
-    display: block;
-    height: 177px;
-    left: 279.5px;
-    position: absolute;
-    top: 111.5px;
-    width: 169px;
-    transform: matrix3d(0.728319, -0.684059, -0.0401911, 0, 0.684882, 0.728578, 0.0105131, 0, 0.0220908, -0.035183, 0.999137, 0, 263, 39, 0, 1);
-    -webkit-transform: matrix3d(0.728319, -0.684059, -0.0401911, 0, 0.684882, 0.728578, 0.0105131, 0, 0.0220908, -0.035183, 0.999137, 0, 263, 39, 0, 1);
-    -moz-transform: matrix3d(0.728319, -0.684059, -0.0401911, 0, 0.684882, 0.728578, 0.0105131, 0, 0.0220908, -0.035183, 0.999137, 0, 263, 39, 0, 1);
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    fill: url("#grad18a1");
-    stroke: rgb(0, 0, 0);
-}
-.gwd-svg-1vvy {
-    display: block;
-    height: 177px;
-    left: 279.5px;
-    position: absolute;
-    top: 111.5px;
-    width: 169px;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    fill: url("#gradojle");
-    transform: translate3d(-227px, -47px, 0px) rotateZ(-43.2051deg) rotateY(2.3034deg) rotateX(0.602855deg);
-    -webkit-transform: translate3d(-227px, -47px, 0px) rotateZ(-43.2051deg) rotateY(2.3034deg) rotateX(0.602855deg);
-    -moz-transform: translate3d(-227px, -47px, 0px) rotateZ(-43.2051deg) rotateY(2.3034deg) rotateX(0.602855deg);
-    stroke: none;
-}
-.gwd-svg-1aty {
-    transform: translate3d(82px, -52px, 0px) rotateZ(-43.2051deg) rotateY(2.3034deg) rotateX(0.602855deg);
-    -webkit-transform: translate3d(82px, -52px, 0px) rotateZ(-43.2051deg) rotateY(2.3034deg) rotateX(0.602855deg);
-    -moz-transform: translate3d(82px, -52px, 0px) rotateZ(-43.2051deg) rotateY(2.3034deg) rotateX(0.602855deg);
-    stroke: none;
-}
-.gwd-p-1i1w {
-    position: absolute;
-    left: 96px;
-    top: 105px;
-    color: rgb(245, 245, 245);
-}
-.gwd-span-iypi {
+  }
+  .gwd-span-iypi {
     position: absolute;
     width: 90px;
     height: 15px;
     left: 403px;
     color: rgb(245, 245, 245);
     top: 104px;
-}
+  }
+  .gwd-a-9w73 {
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    left: 96.5px;
+    top: 104px;
+  }
+  .gwd-div-wxou {
+    position: absolute;
+    width: 161.5px;
+    height: 222px;
+    top: 0%;
+    left: 100%;
+    transform: translate3d(-161px, 0px, 0px);
+    transform-style: preserve-3d;
+  }
+  .gwd-span-45s8 {
+    color: rgb(255, 253, 253);
+    font-family: "Courier New";
+    font-size: 20px;
+    position: absolute;
+    transform-style: preserve-3d;
+    left: 50%;
+    text-align: center;
+    transform: translate3d(-50px, 0px, 1px) rotateY(0.699851deg);
+    width: 61.92%;
+    height: 8.71%;
+    top: 25%;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .gwd-path-vi3x {
+    display: block;
+    height: 222px;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    width: 161.5px;
+    fill: url("#grad1xz3");
+  }
+  .gwd-div-1nui {
+    top: 50%;
+    transform: translate3d(0px, -111px, 0px);
+    left: 25%;
+  }
+  .gwd-svg-1ssd {
+    fill: url("#grad1mil");
+  }
+  .gwd-div-1v5f {
+    top: 50%;
+    transform: translate3d(-161px, -111px, 0px);
+    left: 75%;
+  }
