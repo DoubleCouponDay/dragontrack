@@ -50,8 +50,6 @@ type sessioncontroller() =
         else
             let error = 
                 String.concat String.Empty [
-                "new session cannot be created. session id ";
-                sessionstringid;
-                "already exists."
+                "new session cannot be created."
             ]
             base.Conflict(error) :> ActionResult

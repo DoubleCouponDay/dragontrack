@@ -31,7 +31,9 @@
 	+ increase session expiration date when a request is made to it
 	+ session expiration date 20 minutes
 	+ validate file size upload max 70mb
-	+ validate cache size limit
+	//+ validate cache size limit
+	//+ sessions are stored in memory cache
+	//+ creating a session should check whether there is room in the cache
 
 + audio format wishlist
 	WMA

@@ -1,5 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatRipple } from '@angular/material/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-createsession',
@@ -16,12 +23,6 @@ export class CreatesessionComponent implements OnInit {
   
   public onclick() : void 
   {
-    // console.log("creatediamond clicked")
-    // let rippledef = this.ripple
-    //   .launch({
-    //     centered: false,
-    //     persistent: true
-    //   })
-    // rippledef.fadeOut()
+
   }
 }
