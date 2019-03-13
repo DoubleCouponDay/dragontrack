@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatRipple } from '@angular/material/core';
+import { UploadService } from '../../services/upload/upload.service';
 import {
   trigger,
   state,
@@ -14,7 +15,6 @@ import {
   styleUrls: ['./createsession.component.css']
 })
 export class CreatesessionComponent implements OnInit {
-  @ViewChild(MatRipple) ripple : MatRipple
 
   constructor() { }
 
@@ -23,6 +23,5 @@ export class CreatesessionComponent implements OnInit {
   
   public onclick() : void 
   {
-
   }
 }
