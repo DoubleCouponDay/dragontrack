@@ -11,8 +11,8 @@ import { defer } from "rxjs"
   animations: [routerTransition],
 })
 export class AppComponent {
-  title = 'dragontrack';
-  pageTransition
+  title = 'dragontrack'
+  pageTransition : any
 
   private previousPath: string = ''
   private router: Router

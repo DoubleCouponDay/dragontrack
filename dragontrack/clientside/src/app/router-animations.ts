@@ -5,7 +5,7 @@ import {
     animate,
     style,
     group,
-    query as q,
+    query,
     transition,
     keyframes,
     animateChild,
@@ -14,18 +14,16 @@ import {
     AnimationGroupMetadata,
   } from '@angular/animations'
   
-  const query = (style, animate, optional = { optional: true }) => q(style, animate, optional)
+  const extendedquery = (style : any, animate : any, optional = { optional: true }) => query(style, animate, optional)
   
   const fade : (AnimationQueryMetadata | AnimationGroupMetadata )[] = [
-    query(':enter, :leave', style({ position: 'fixed', width: '100%' })),
-    query(':enter', [style({ opacity: 0 })]),
-    group([
-      query(':leave', [animate('0.3s ease-out', style({ opacity: 0 }))]),
-      query(':enter', [
+    extendedquery(':enter, :leave', style({ position: 'fixed', width: '100%' })),
+    extendedquery(':enter', [style({ opacity: 0 })]),
+      extendedquery(':leave', [animate('0.3s ease-out', style({ opacity: 0 }))]),
+      extendedquery(':enter', [
         style({ opacity: 0, zIndex: 1 }),
         animate('0.3s ease-out', style({ opacity: 1 })),
-      ]),
-    ]),
+      ])
   ]
   
   export const routerTransition : AnimationTriggerMetadata = trigger('routerTransition', [

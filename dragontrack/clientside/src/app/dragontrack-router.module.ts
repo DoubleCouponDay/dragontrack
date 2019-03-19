@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { SessionpageComponent } from './pages/sessionpage/sessionpage.component'
+import { homepagecomponent } from './pages/homepage/homepage.component'
 import { EntersessionidComponent } from './pages/joinsessionpage/entersessionid/entersessionid.component';
 
 @NgModule({
@@ -19,12 +19,12 @@ import { EntersessionidComponent } from './pages/joinsessionpage/entersessionid/
       },
       {
         path: '',
-        component: SessionpageComponent
+        component: homepagecomponent
       }, 
-      // {
-      //   path: '**',
-      //   redirectTo: 'start'
-      // }
+      {
+        path: '**',
+        redirectTo: ''
+      }
     ])
   ],
   exports: [
