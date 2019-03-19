@@ -11,11 +11,24 @@
   </defs>
 </svg>
 
-<div
-  class="gwd-div-wxou gwd-div-1v5f" id="joinsessioncomponent">
+<div class="gwd-div-wxou gwd-div-1v5f" 
+  id="joinsessioncomponent"
+  (click)="onClick()">
 
-  <svg data-gwd-shape="path" preserveAspectRatio="none" viewBox="0 0 161.5 222" class="gwd-path-vi3x gwd-gen-23cmgwdanimation" id="joinsessiondiamond">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M 80.5,0.5 C 80.5,0.5 0.5,79.5 0.5,79.5 0.5,79.5 79.5,221.5 79.5,221.5 79.5,221.5 161,79.5 161,79.5 161,79.5 82,2.5 80.5,0.5"></path>
+  <svg (click)="onClick()"
+    data-gwd-shape="path" 
+    preserveAspectRatio="none" 
+    viewBox="0 0 161.5 222" 
+    class="gwd-path-vi3x gwd-gen-23cmgwdanimation" 
+    id="joinsessiondiamond">
+    <path (click)="onClick()"
+      stroke-linecap="round" 
+      stroke-linejoin="round" 
+      d="M 80.5,0.5 C 80.5,0.5 0.5,79.5 0.5,79.5 0.5,79.5 79.5,221.5 79.5,221.5 79.5,221.5 161,79.5 161,79.5 161,79.5 82,2.5 80.5,0.5"></path>
   </svg>
-  <button class="gwd-span-45s8 gwd-gen-108ygwdanimation gwd-gen-1879gwdanimation" id="joinsessiontext">join session</button>
+  <button (click)="onClick()"
+    class="gwd-span-45s8 gwd-gen-108ygwdanimation gwd-gen-1879gwdanimation" 
+    id="joinsessiontext">
+      join session
+  </button>
 </div>

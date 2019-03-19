@@ -55,8 +55,8 @@ type Startup private () =
 
             spa.Options.SourcePath <- sourcefolderspath
 
-            if env.IsDevelopment() then
-                spa.UseProxyToSpaDevelopmentServer("http://localhost:4200")
+            //if env.IsDevelopment() then
+            //    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200")
         )       
 
     member val Configuration : IConfiguration = null with get, set

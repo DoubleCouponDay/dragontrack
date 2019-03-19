@@ -19,6 +19,8 @@
 
 	+ validate file size 70mb
 
+	+ sessions should be polled to update its expiration
+
 + server side
 	+ caching of two tracks
 	+ session id for other to join
@@ -34,6 +36,7 @@
 	//+ validate cache size limit
 	//+ sessions are stored in memory cache
 	//+ creating a session should check whether there is room in the cache
+	//+joining a session that doesnt exist creates the session	
 
 + audio format wishlist
 	WMA

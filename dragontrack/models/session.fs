@@ -6,4 +6,4 @@ open System.IO
 type session() =
     static member public expirationspan = TimeSpan.FromMinutes(float(20))
 
-    member val public id : Guid = Guid.Empty with get, set
+    member val public id : Guid = Guid.NewGuid() with get, set

@@ -1,2 +1,3 @@
-<app-createsession></app-createsession>
-<app-joinsession></app-joinsession>
+<main [@routerTransition]="pageTransition | async">
+    <router-outlet #routerOutlet="outlet"></router-outlet> 
+</main>

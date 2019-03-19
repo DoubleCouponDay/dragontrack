@@ -6,8 +6,9 @@ open Microsoft.AspNetCore.Routing
 open System.Runtime.Caching
 open Microsoft.AspNetCore.Mvc.ViewEngines
 open dragontrack.models.session
+open dragontrack.controllers.constants
 
-[<Route("api/session")>]
+[<Route(api + "session")>]
 [<ApiController>]
 type sessioncontroller() =
     inherit ControllerBase()
@@ -20,7 +21,7 @@ type sessioncontroller() =
             base.Ok(inputid) :> ActionResult
 
         else
-            base.NotFound() :> ActionResult
+            x.Post()
 
     member private x.getcacheitempriority() : CacheItemPriority =
         CacheItemPriority.Default
@@ -33,11 +34,9 @@ type sessioncontroller() =
 
     [<HttpPost>]
     member public x.Post() : ActionResult =
-        let sessionid = Guid.NewGuid()
-        let sessionstringid = sessionid.ToString()
         let newsession = new session()
-        newsession.id <- sessionid
-        let cacheitem = new CacheItem(sessionstringid, newsession)
+        let idstring = newsession.id.ToString()
+        let cacheitem = new CacheItem(idstring, newsession)
         let policy = x.getcacheitempolicy()
 
         let outcome = 
@@ -45,7 +44,7 @@ type sessioncontroller() =
                 .Add(cacheitem, policy)
 
         if outcome then 
-            base.Ok(sessionid) :> ActionResult
+            base.Ok(idstring) :> ActionResult
 
         else
             let error = 

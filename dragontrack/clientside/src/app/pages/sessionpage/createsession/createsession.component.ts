@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatRipple } from '@angular/material/core';
-import { UploadService } from '../../services/upload/upload.service';
+import { SessionService } from '../../../services/session.service';
 import {
   trigger,
   state,
@@ -16,7 +16,7 @@ import {
 })
 export class CreatesessionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sessionService : SessionService) { }
 
   ngOnInit() {
   }
