@@ -1,4 +1,4 @@
-﻿module dragontrack.Controllers.session
+﻿namespace WebApplication1.Controllers
 
 open System
 open Microsoft.AspNetCore.Mvc
@@ -7,21 +7,39 @@ open System.Runtime.Caching
 open Microsoft.AspNetCore.Mvc.ViewEngines
 open dragontrack.models.session
 open dragontrack.controllers.constants
+open System.Collections.Generic
+open Newtonsoft.Json
 
 [<Route(api + "session")>]
 [<ApiController>]
 type sessioncontroller() =
     inherit ControllerBase()
 
+    let mutable currentid : Nullable<Guid> = System.Nullable()
+
     [<HttpGet>]
-    member public x.Get(inputid : Guid) : ActionResult =
-        if (MemoryCache.Default
-                .Contains(inputid.ToString())
+    [<Route("{id}")>]
+    member public x.Get(id : string) : ActionResult =
+        let mutable possibleguid = Guid.Empty 
+        let isguid = Guid.TryParse(id, &possibleguid)        
+
+        if isguid = false then
+            x.BadRequest("guid is not valid.") :> ActionResult
+
+        else if (MemoryCache.Default
+                .Contains(id)
             ) then
-            base.Ok(inputid) :> ActionResult
+
+            let oldcacheitem = MemoryCache.Default.GetCacheItem(id)
+            let newpolicy = x.getcacheitempolicy()
+            MemoryCache.Default.Set(oldcacheitem, newpolicy) //updates the expiration date of the session
+            new JsonResult(oldcacheitem.Value) :> ActionResult
 
         else
-            x.Post()
+            currentid <- System.Nullable(possibleguid)
+            let output = x.Post()
+            currentid <- System.Nullable()
+            output
 
     member private x.getcacheitempriority() : CacheItemPriority =
         CacheItemPriority.Default
@@ -34,7 +52,11 @@ type sessioncontroller() =
 
     [<HttpPost>]
     member public x.Post() : ActionResult =
-        let newsession = new session()
+        let mutable newsession = new session()
+
+        if currentid.HasValue then //lets me implicitly create a session if you get a non existent session with a valid guid
+            newsession.id <- currentid.Value
+
         let idstring = newsession.id.ToString()
         let cacheitem = new CacheItem(idstring, newsession)
         let policy = x.getcacheitempolicy()
@@ -44,11 +66,11 @@ type sessioncontroller() =
                 .Add(cacheitem, policy)
 
         if outcome then 
-            base.Ok(idstring) :> ActionResult
+            new JsonResult(cacheitem.Value) :> ActionResult
 
         else
             let error = 
                 String.concat String.Empty [
-                "new session cannot be created."
+                "session already exists."
             ]
             base.Conflict(error) :> ActionResult

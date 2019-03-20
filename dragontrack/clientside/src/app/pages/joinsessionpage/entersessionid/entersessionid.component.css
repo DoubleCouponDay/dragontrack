@@ -1,65 +1,89 @@
+:host {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+p {
+  margin: 0px;
+}
+h1 {
+  margin: 0px;
+}
+h2 {
+  margin: 0px;
+}
+h3 {
+  margin: 0px;
+}
+
 #gwd-svg-definitions {
-    position: absolute;
-  }
-  html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-  }
-  body {
-    background-color: transparent;
-    transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    transform-style: preserve-3d;
-  }
-  .gwd-div-18uv {
-    position: absolute;
-    width: 457px;
-    height: 343px;
-    top: 50%;
-    transform-style: preserve-3d;
-    left: 50%;
-    transform: translate3d(-228px, -171px, 0px);
-  }
-  .gwd-div-w4kq {
-    position: absolute;
-    width: 277px;
-    height: 45px;
-    transform-origin: 79.0668px 88.5px 0px;
-    text-align: center;
-    font-size: 24px;
-    left: 50%;
-    transform-style: preserve-3d;
-    top: 0%;
-    transform: translate3d(-138px, 0px, 0px);
-    font-family: "Courier New";
-  }
-  .gwd-input-11tx {
-    position: absolute;
-    top: 110px;
-    height: 16px;
-    left: 50%;
-    transform: translate3d(-46px, 0px, 0px);
-    transform-style: preserve-3d;
-    width: 90px;
-  }
-  .gwd-button-1b52 {
-    position: absolute;
-    width: 45px;
-    height: 17.9967px;
-    transform-style: preserve-3d;
-    top: 146px;
-    left: 49%;
-    transform: translate3d(-19px, 0px, 0.259527px);
-    text-align: center;
-  }
-  .gwd-path-vi3x {
-    display: block;
-    height: 222px;
-    position: absolute;
-    width: 161.5px;
-    fill: url("#grad1xz3");
-    top: 15%;
-    left: 50%;
-    transform: translate3d(-81px, 0px, 0px);
-    transform-style: preserve-3d;
-  }
+  position: absolute;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+body {
+  background-color: transparent;
+  transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transform-style: preserve-3d;
+}
+.gwd-div-18uv {
+  position: absolute;
+  width: 457px;
+  height: 343px;
+  top: 50%;
+  transform-style: preserve-3d;
+  left: 50%;
+  transform: translate3d(-228px, -171px, 0px);
+}
+.gwd-div-w4kq {
+  position: absolute;
+  width: 277px;
+  height: 45px;
+  transform-origin: 79.0668px 88.5px 0px;
+  text-align: center;
+  font-size: 24px;
+  left: 50%;
+  transform-style: preserve-3d;
+  top: 0%;
+  transform: translate3d(-138px, 0px, 0px);
+  font-family: "Courier New";
+}
+.gwd-input-11tx {
+  position: absolute;
+  top: 110px;
+  height: 16px;
+  left: 50%;
+  transform: translate3d(-46px, 0px, 0px);
+  -webkit-transform: translate3d(-46px, 0px, 0px);
+  -moz-transform: translate3d(-46px, 0px, 0px);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  width: 90px;
+}
+.gwd-button-1b52 {
+  position: absolute;
+  width: 45px;
+  height: 17.9967px;
+  transform-style: preserve-3d;
+  top: 146px;
+  left: 49%;
+  transform: translate3d(-19px, 0px, 0.259527px);
+  text-align: center;
+}
+.gwd-path-vi3x {
+  display: block;
+  height: 222px;
+  position: absolute;
+  width: 161.5px;
+  fill: url("#grad1xz3");
+  top: 15%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-81px, 0px, 0px);
+}

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { apiroute } from './constants';
+import { session } from '../models/session';
 
 const sessionroute = "/session"
 
@@ -12,15 +13,16 @@ export class SessionService {
   
   constructor(private httpClient : HttpClient) { }
 
-  public getSession(inputsessionid : string) : Observable<string>
+  public getSession(inputsessionid : string) : Observable<session>
   {
     return this.httpClient
-      .get<string>(`${apiroute}${sessionroute}/${inputsessionid}`)
+      .get<session>(
+        `${apiroute}${sessionroute}/${inputsessionid}`)
   }
 
-  public postSession() : Observable<string>
+  public postSession() : Observable<session>
   {
     return this.httpClient
-      .post<string>(`${apiroute}${sessionroute}`, {})      
+      .post<session>(`${apiroute}${sessionroute}`, {})      
   }
 }

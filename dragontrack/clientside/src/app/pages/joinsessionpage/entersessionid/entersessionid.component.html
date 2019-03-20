@@ -6,11 +6,11 @@
     </linearGradient>
   </defs>
 </svg>
-<div class="gwd-div-18uv" id="joinsessionmodal">
-  <div class="gwd-div-w4kq">enter session ID</div>
-  <input class="gwd-input-11tx gwd-gen-1jsogwdanimation" id="sessionidinput">
-  <button class="gwd-button-1b52" id="joinsessionbutton">enter</button>
+<div class="gwd-div-18uv" id="joinsessionmodal" >
   <svg data-gwd-shape="path" preserveAspectRatio="none" viewBox="0 0 161.5 222" class="gwd-path-vi3x gwd-gen-23cmgwdanimation gwd-svg-1x0i" id="joinsessiondiamond">
     <path stroke-linecap="round" stroke-linejoin="round" d="M 80.5,0.5 C 80.5,0.5 0.5,79.5 0.5,79.5 0.5,79.5 79.5,221.5 79.5,221.5 79.5,221.5 161,79.5 161,79.5 161,79.5 82,2.5 80.5,0.5"></path>
   </svg>
+  <div class="gwd-div-w4kq">enter session ID</div>
+  <input class="gwd-input-11tx gwd-gen-1jsogwdanimation" id="sessionidinput" [(ngModel)]="boundId">
+  <button (click)="onClick()" class="gwd-button-1b52" id="joinsessionbutton">enter</button>
 </div>

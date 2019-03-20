@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TrackcomponentComponent } from './trackcomponent.component';
+import { SessionpageComponent } from './sessionpage.component';
 
-describe('TrackcomponentComponent', () => {
-  let component: TrackcomponentComponent;
-  let fixture: ComponentFixture<TrackcomponentComponent>;
+describe('SessionpageComponent', () => {
+  let component: SessionpageComponent;
+  let fixture: ComponentFixture<SessionpageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrackcomponentComponent ]
+      declarations: [ SessionpageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TrackcomponentComponent);
+    fixture = TestBed.createComponent(SessionpageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

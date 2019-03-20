@@ -49,6 +49,7 @@
     <Compile Include="models\session.fs" />
     <Content Include="featurepriority.txt" />
     <Content Include="brainstorm.txt" />
+    <Compile Include="Controllers\ValuesController.fs" />
     <Compile Include="Controllers\constants.fs" />
     <Compile Include="Controllers\session.fs" />
     <Compile Include="Controllers\audio\upload.fs" />
@@ -60,6 +61,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="System.Runtime.Caching" Version="4.5.0" />
   </ItemGroup>
 

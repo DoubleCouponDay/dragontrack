@@ -45,18 +45,18 @@ type Startup private () =
 
         app.UseHttpsRedirection() |> ignore
         app.UseMvc(fun routes ->
-            routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}")
+            routes.MapRoute("default", "{controller}/{action}/{id?}")
             ()
         ) |> ignore
         
-        app.UseSpa(fun spa -> 
-            // To learn more about options for serving an Angular SPA from ASP.NET Core,
-            // see https://go.microsoft.com/fwlink/?linkid=864501
+        //app.UseSpa(fun spa -> 
+        //    // To learn more about options for serving an Angular SPA from ASP.NET Core,
+        //    // see https://go.microsoft.com/fwlink/?linkid=864501
 
-            spa.Options.SourcePath <- sourcefolderspath
+        //    spa.Options.SourcePath <- sourcefolderspath
 
-            //if env.IsDevelopment() then
-            //    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200")
-        )       
+        //    //if env.IsDevelopment() then
+        //    //    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200")
+        //)       
 
     member val Configuration : IConfiguration = null with get, set

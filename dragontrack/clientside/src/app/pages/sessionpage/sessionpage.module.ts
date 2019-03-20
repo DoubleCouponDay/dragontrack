@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TrackcomponentComponent } from './trackcomponent/trackcomponent.component';
+import { SessionpageComponent } from './sessionpage.component';
+import { TrackinfoComponent } from './trackinfo/trackinfo.component';
 
 @NgModule({
-  declarations: [TrackcomponentComponent],
+  declarations: [SessionpageComponent, TrackinfoComponent],
   imports: [
-    CommonModule
+    CommonModule    
+  ],
+  providers: [
+
   ]
 })
 export class sessionpagemodule { }
