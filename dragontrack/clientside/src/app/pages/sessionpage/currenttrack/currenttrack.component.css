@@ -1,0 +1,161 @@
+#gwd-svg-definitions {
+    position: absolute;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+  body {
+    background-color: transparent;
+    transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-style: preserve-3d;
+    left: 0%;
+    top: 0%;
+  }
+  .gwd-div-fm4h {
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    height: 298px;
+    left: 0%;
+    top: 50%;
+    transform: translate3d(0px, -150px, 0px);
+    transform-style: preserve-3d;
+    width: 300px;
+  }
+  .gwd-p-1kpr {
+    position: absolute;
+    height: 20px;
+    font-family: "Courier New";
+    top: 89px;
+    width: 110px;
+    left: 0%;
+    transform: translate3d(-1px, 0px, 0px);
+    transform-style: preserve-3d;
+  }
+  .gwd-p-ptcm {
+    position: absolute;
+    height: 20px;
+    top: 169px;
+    left: 0%;
+    font-family: "Courier New";
+    width: 110px;
+  }
+  .gwd-p-qmyc {
+    position: absolute;
+    height: 20px;
+    top: 209px;
+    left: 0%;
+    font-family: "Courier New";
+    width: 110px;
+  }
+  .gwd-p-i9kv {
+    position: absolute;
+    height: 20px;
+    top: 129px;
+    left: 0%;
+    font-family: "Courier New";
+    width: 110px;
+  }
+  .gwd-p-yq2r {
+    height: 29.8611px;
+    position: absolute;
+    top: 0%;
+    width: 186.111px;
+    transform-style: preserve-3d;
+    left: 50%;
+    transform: translate3d(-93px, 15px, 0px);
+    font-family: "Courier New";
+    text-align: center;
+    font-size: 25px;
+  }
+  .gwd-p-kzk9 {
+    position: absolute;
+    width: 190.007px;
+    height: 20.0278px;
+    left: 109.999px;
+    top: 89.0096px;
+  }
+  .gwd-p-1o5g {
+    top: 129px;
+    left: 110px;
+  }
+  .gwd-p-12au {
+    left: 110px;
+    top: 169px;
+  }
+  .gwd-p-1guw {
+    left: 110px;
+    top: 209px;
+  }
+  .gwd-div-1sf9 {
+    left: 100%;
+    transform: translate3d(-302px, -150px, 0px);
+  }
+  .gwd-div-w4kq {
+    position: absolute;
+    height: 45px;
+    transform-origin: 79.0668px 88.5px 0px;
+    text-align: center;
+    font-size: 24px;
+    left: 50%;
+    transform-style: preserve-3d;
+    top: 0%;
+    font-family: "Courier New";
+    width: 250px;
+    transform: translate3d(-125px, 0px, 0px);
+  }
+  .gwd-div-18uv {
+    position: absolute;
+    height: 343px;
+    top: 50%;
+    transform-style: preserve-3d;
+    left: 50%;
+    width: 250px;
+    transform: translate3d(-125px, -171px, 0px);
+  }
+  .gwd-path-vi3x {
+    display: block;
+    height: 222px;
+    position: absolute;
+    width: 161.5px;
+    fill: url("#grad1xz3");
+    top: 15%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-81px, 0px, 0px);
+  }
+  .gwd-input-11tx {
+    position: absolute;
+    top: 110px;
+    height: 16px;
+    left: 50%;
+    transform: translate3d(-46px, 0px, 0px);
+    transform-style: preserve-3d;
+    width: 90px;
+  }
+  .gwd-button-1b52 {
+    position: absolute;
+    height: 17.9967px;
+    transform-style: preserve-3d;
+    top: 146px;
+    text-align: center;
+    width: 60px;
+    left: 50%;
+    transform: translate3d(-30px, 0px, 0.259527px);
+  }
+  .gwd-button-2pln {
+    transform: translate3d(-30px, 2px, 0px);
+  }
+  .gwd-button-1ru3 {
+    transform: translate3d(-30px, -23px, 0px);
+  }
+  .gwd-p-1s9s {
+    left: 50%;
+    transform-style: preserve-3d;
+    top: 50%;
+    transform: translate3d(0px, 162px, 0px);
+    text-align: center;
+    font-family: "Courier New";
+  }

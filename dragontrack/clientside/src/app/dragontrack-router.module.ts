@@ -11,7 +11,7 @@ import { SessionpageComponent, sessionpageroute } from './pages/sessionpage/sess
     CommonModule,
     RouterModule.forRoot([
       {
-        path: sessionpageroute,
+        path: `${sessionpageroute}/:id`,
         component: SessionpageComponent
       }, 
       {

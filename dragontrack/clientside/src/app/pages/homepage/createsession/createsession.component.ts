@@ -10,13 +10,15 @@ import {
 } from '@angular/animations';
 import { Router } from '@angular/router';
 import { sessionpageroute } from '../../sessionpage/sessionpage.component';
+import { synchronousgroupclick } from '../../../models/synchronousgroupclick';
 
 @Component({
   selector: 'app-createsession',
   templateUrl: './createsession.component.html',
   styleUrls: ['./createsession.component.css']
 })
-export class CreatesessionComponent implements OnInit {
+export class CreatesessionComponent implements OnInit, synchronousgroupclick {
+  public wasClicked : boolean
 
   constructor(
     private sessionService : SessionService,
@@ -28,14 +30,23 @@ export class CreatesessionComponent implements OnInit {
   
   public onClick() : void 
   {
-    this.sessionService
-      .postSession()
-      .subscribe(result => {
-        this.router 
-          .navigate([sessionpageroute, result])
-      },
-      error => {
-        window.alert(JSON.stringify(error))
-      })
+    if(this.wasClicked === false)
+    {
+      this.wasClicked = true
+
+      this.sessionService
+        .postSession()
+        .subscribe(result => {
+          this.wasClicked = false
+
+          this.router 
+            .navigate([sessionpageroute, result])
+        },
+        error => {
+          this.wasClicked = false
+
+          window.alert(JSON.stringify(error))
+        })
+    }
   }
 }

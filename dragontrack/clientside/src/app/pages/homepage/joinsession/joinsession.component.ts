@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { entersessionroute } from '../../joinsessionpage/entersessionid/entersessionid.component';
+import { synchronousgroupclick } from '../../../models/synchronousgroupclick';
 
 @Component({
   selector: 'app-joinsession',
@@ -16,8 +17,6 @@ export class JoinsessionComponent implements OnInit {
 
   public onClick()
   {
-    this.router.navigate([entersessionroute])      
-      
+    this.router.navigate([entersessionroute])            
   }
-
 }

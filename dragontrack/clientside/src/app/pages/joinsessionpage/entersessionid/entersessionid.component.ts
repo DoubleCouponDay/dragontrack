@@ -16,7 +16,8 @@ export class EntersessionidComponent implements OnInit {
 
   constructor(
     private sessionService : SessionService,
-    private router : Router) { }
+    private router : Router
+    ) { }
 
   ngOnInit() {
   }

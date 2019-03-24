@@ -18,5 +18,4 @@ export class SessionpageComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
