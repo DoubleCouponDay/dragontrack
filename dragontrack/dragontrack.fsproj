@@ -49,7 +49,6 @@
     <Compile Include="models\session.fs" />
     <Content Include="featurepriority.txt" />
     <Content Include="brainstorm.txt" />
-    <Compile Include="Controllers\ValuesController.fs" />
     <Compile Include="Controllers\constants.fs" />
     <Compile Include="Controllers\session.fs" />
     <Compile Include="Controllers\audio\upload.fs" />

@@ -42,7 +42,7 @@ type sessioncontroller() =
             output
 
     member private x.getcacheitempriority() : CacheItemPriority =
-        CacheItemPriority.Default
+        CacheItemPriority.NotRemovable
 
     member private x.getcacheitempolicy() : CacheItemPolicy =
         let output = new CacheItemPolicy()
