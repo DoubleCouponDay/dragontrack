@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet, Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { routerTransition } from './router-animations';
 import { filter, map } from "rxjs/operators";
-import { defer } from "rxjs"
+import { defer, Observable } from "rxjs"
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { defer } from "rxjs"
 })
 export class AppComponent {
   title = 'dragontrack'
-  pageTransition : any
+  public pageTransition : Observable<unknown>
 
   private previousPath: string = ''
   private router: Router
@@ -23,10 +23,11 @@ export class AppComponent {
     this.pageTransition = router.events.pipe(
       map((event) => {
         if (event instanceof NavigationEnd || event instanceof NavigationStart) {
-          return event.url
+          return true
         }
+        return false
       }),
-      filter(Boolean)
+      filter((input) => input === true)
     )
   }
 }
